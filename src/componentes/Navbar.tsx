@@ -7,19 +7,19 @@ interface buttonProps {
 
 const Navbar : React.FC = () => {
 
-    const [menu, setMenu] = useState<boolean>(true);
+    const [menu, setMenu] = useState<boolean>(false);
 
     return (
-        <nav className="w-full h-10 bg-red-300 text-white flex">
-            <div className="w-1/2 pl-4 flex items-center">
+        <nav className="w-full h-14 bg-red-900 text-white flex">
+            <div className="w-1/2 pl-4 flex items-center text-xl font-semibold">
                 <h3>StoreImage</h3>
             </div>
             <div className="w-1/2 flex items-center justify-end sm:hidden">
-                <span className="h-full w-10 flex items-center justify-center hover:bg-red-400" onClick={() => setMenu(!menu)}>
+                <span className="h-full w-14 flex items-center justify-center hover:bg-red-400" onClick={() => setMenu(!menu)}>
                     <IoMdMenu />
                 </span>
             </div>
-            <div className={menu ? "flex w-full h-auto flex-col absolute top-10 bg-red-300 sm:hidden" : "hidden"}>
+            <div className={menu ? "flex w-full h-auto flex-col absolute top-10 bg-red-900 sm:hidden" : "hidden"}>
                 <Button text="Iniciar sesión"/>
                 <Button text="Registrarse"/>
             </div>
